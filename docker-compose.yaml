@@ -1,0 +1,32 @@
+version: '3.9'
+services:
+  backend:
+    build: .
+    container_name: backend_container
+    ports:
+      - '8000:8000'
+    depends_on:
+      - db
+    environment:
+      DB_NAME: postgres            
+      DB_USER: postgres            
+      DB_PASSWORD: postgres        
+      DB_HOST: db                  
+      DB_PORT: 5432               
+    volumes:
+      - .:/src
+
+  db:
+    image: postgres
+    container_name: database_container
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
