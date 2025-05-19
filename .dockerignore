@@ -1,0 +1,47 @@
+# Byte-compiled / cache files
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Django/migrations
+**/migrations/
+!*/migrations/__init__.py  # keep the __init__ if needed
+
+# Local dev databases
+*.sqlite3
+
+# Environment and secrets
+.env
+*.env
+secrets/
+credentials/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Node / frontend builds (if using)
+node_modules/
+*.log
+*.lock
+dist/
+build/
+*.tgz
+
+# IDE/editor/project files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# OS and misc
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
